@@ -1,0 +1,51 @@
+body{
+	background-image: url("../img/background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.pointer{
+	cursor: pointer;
+}
+.node{
+	margin: 7px 7px;
+    padding: 4px 13px;
+    background-color: rgb(162, 162, 162);
+	border-radius: 2px;
+	box-shadow: grey 3px 3px 2px 1px;
+	cursor: pointer;
+	-webkit-transition: font-size 0.15s linear;
+	-moz-transition: font-size 0.15s linear;
+	transition: font-size 0.15s linear;
+}
+.node:hover{
+	color: #fff;
+	background-color: rgb(152, 152, 152);
+}
+.noResultMessage{
+	margin: 7px 7px;
+    padding: 4px 13px;
+	border-radius: 2px;
+	box-shadow: grey 3px 3px 2px 1px;
+}
+.searchInput{
+	position: relative;
+}
+.searchInput .suggetionBox{
+	width: 100%;
+	position: absolute;
+	border-radius: 2px;
+    background-color: rgb(162, 162, 162);
+	box-shadow: grey 2px 2px 2px 1px;
+}
+.suggetionBox .item{
+	margin: 2px 3px;
+	cursor: pointer;
+}
+.suggetionBox .item:hover{
+	background-color: rgb(142, 142, 142);
+}
+.flclass{
+	padding: 10px;
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			One.com javascript Assignment
+		</title>
+		<!-- Added production version boostrap css for styling -->
+		<link rel="stylesheet" type="text/css" href="styles/libs/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="styles/libs/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+	</head>
+	<body>
+		<!-- Templates for the page -->
+		<div style="display: none;">
+
+			<!-- Template : to show searched reslts -->
+			<div data-template="searchedResult">
+				<div class="well" data-result-list="{{stringify this}}">
+					<h5>
+						 BFS SEARCH FOR {{start}} (TreeLookup)
+					</h5>
+					{{#if nodesList.length}}
+						{{#each nodesList}}
+							<div class="node row" data-node>
+								<div class="col-md-2 col-xs-6">
+									{{this}}
+								</div>
+							</div>
+						{{/each}}
+					{{else}}
+						<div class="bg-danger noResultMessage"> No Node Found. :( </div>
+					{{/if}}
+				</div>
+			</div>
+
+			<!-- Template : to show error while searching -->
+			<div data-template="searchError">
+				<div class="well">
+					<div class="bg-danger noResultMessage">  Something Went Wrong.  </div>
+				</div>
+			</div>
+		</div>
+
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<a class="navbar-brand" href="#">One.com JavaScript Assignment</a>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="searchHeader text-center well" data-search-form>
+				<!-- inline form for flight search options -->
+				<form class="form-inline" role="form">
+					<div>
+					 	<div class="form-group  searchInput">
+					    	<!-- starting location input -->
+					    	<input type="text" id="js-search-input" name="start" class="form-control" placeholder="search for a node" data-location-suggetion="luck" required>
+					    	<div class="suggetionBox" style="display: none;">
+					    	</div>
+					  	</div>
+					<button type="submit" class="btn btn-primary">Search Node</button>
+				</form>
+			</div>
+			<div class="searchResults" data-show-searchResults>
+			</div>
+		</div>
+		<div>
+			<!-- Third Party Libs -->
+			<script type="text/javascript" src="js/libs/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="js/libs/handlebars-v1.3.0.js"></script>
+			<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/async/2.1.1/async.js"></script>
+			<script type="text/javascript" src="js/libs/treeLookup.js"></script>
+			<!-- App inilizing JS files -->
+			<script type="text/javascript" src="js/utils.js"></script>
+			<script type="text/javascript" src="js/main.js"></script>
+		</div>
+	</body>
+</html>
